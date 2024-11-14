@@ -32,6 +32,8 @@ class Program
 
         Console.WriteLine($"Calling the function at 0x{(ulong)fpCallMe:X}");
 
+        fpCallMe();
+
         /*
 
         Or, if you want to use the delegate type:
