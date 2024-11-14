@@ -1,4 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+// See https://aka.ms/new-console-template for more information
 
 using System.Runtime.InteropServices;
 using Interop.HostFxr;
@@ -24,7 +24,7 @@ class Program
         hostfxr.LoadAssemblyAndGetFunctionPointer(
             typeof(Program).Assembly.Location,
             typeof(Program).AssemblyQualifiedName!,
-            "Test",
+            "CallMe",
             HostFxr.UNMANAGEDCALLERSONLY_METHOD,
             null,
             (void**)&fpCallMe
@@ -39,7 +39,7 @@ class Program
         hostfxr.LoadAssemblyAndGetFunctionPointer(
             typeof(Program).Assembly.Location,
             typeof(Program).AssemblyQualifiedName!,
-            "Test",
+            "CallMe",
             "Sample.Program+CallMeDelegate, Sample",
             null,
             (void**)&fpCallMe
